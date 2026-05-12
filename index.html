@@ -154,29 +154,28 @@
     padding: 0 32px;
   }
   .nav-logo {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-    gap: 3px;
-    text-decoration: none;
-  }
-  .nav-logo-top {
-    font-family: var(--font-serif);
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: var(--charcoal);
-    font-style: italic;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  line-height: 1;
+}
+
+.nav-logo-top {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--charcoal);
+}
   .nav-logo-top span { color: var(--gold); }
   .nav-logo-bottom {
-    font-family: var(--font-sans);
-    font-size: 8px;
-    font-weight: 600;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: var(--mid);
-  }
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
   .nav-links { display: flex; align-items: center; gap: 32px; }
   .nav-links a {
     font-size: 10px;
@@ -1071,7 +1070,7 @@
     font-size: 14px;
     outline: none;
     transition: border-color 0.2s;
-    -webkit-appearance: none;
+    appearance: none;
   }
   .form-row input:focus,
   .form-row select:focus,
@@ -1254,6 +1253,42 @@
     .container { padding: 0 20px; }
     .inquiry-form { padding: 32px 24px; }
   }
+  .site-credits{
+  margin-top: 44px;
+  margin-left: 72px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: fit-content;
+  padding: 7px 12px;
+
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.035);
+  border-radius: 999px;
+}
+
+.site-credits a{
+  display: flex;
+  align-items: center;
+}
+
+.site-credits img{
+  height: 10px;
+  width: auto;
+  max-width: 58px;
+  object-fit: contain;
+  display: block;
+  opacity: .82;
+}
+
+.site-credits span{
+  width: 1px;
+  height: 10px;
+  background: rgba(255,255,255,.18);
+}
 </style>
 </head>
 <body>
@@ -1283,10 +1318,10 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo">
-        <span class="nav-logo-top">Elevated <span>India</span></span>
-        <span class="nav-logo-bottom">Private Travel House</span>
-      </a>
+    <a href="#hero" class="nav-logo beatles-style-logo">
+  <span class="nav-logo-top">Elevated India</span>
+  <span class="nav-logo-bottom">Private Travel House</span>
+</a>
     <div class="nav-links">
       <a href="#hero">Home</a>
       <a href="#experiences">Experiences</a>
@@ -1414,7 +1449,7 @@
     <div class="exp-grid">
 
       <div class="exp-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Kainchi_Dham_Ashram.jpg/640px-Kainchi_Dham_Ashram.jpg"
+        <img src="kainchi.jpg"
           alt="Kainchi Dham Ashram Walk"
           onerror="this.src='https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=600&q=80';this.onerror=null" />
         <div class="exp-card-body">
@@ -1426,7 +1461,7 @@
       </div>
 
       <div class="exp-card">
-        <img src="https://images.unsplash.com/photo-1614893890543-c438c8d8fa1f?w=600&q=80"
+        <img src="himalayan.jpg"
           alt="Himalayan River Silence"
           onerror="this.style.background='#1a1814';this.style.height='360px'" />
         <div class="exp-card-body">
@@ -1450,7 +1485,7 @@
       </div>
 
       <div class="exp-card">
-        <img src="https://images.unsplash.com/photo-1618015357798-e7e5a0f65bad?w=600&q=80"
+        <img src="sound.png"
           alt="Indian Wisdom Sound Journey"
           onerror="this.style.background='#1a1814';this.style.height='360px'" />
         <div class="exp-card-body">
@@ -1499,7 +1534,7 @@
     </div>
     <div class="stays-layout">
       <div class="stays-main-img">
-        <img src="https://images.unsplash.com/photo-1504198266287-1659872e6590?w=700&q=80"
+        <img src="himalayan_heights.png"
           alt="Himalayan ashram exterior and mountain retreat architecture"
           onerror="this.style.background='#e8e0d0';this.style.height='560px'" />
         <div class="stays-tag-overlay">Himalayan Base</div>
@@ -1531,7 +1566,7 @@
             <p>River sound, Himalayan air, and a slow welcome into the day.</p>
           </div>
           <div class="mini-card">
-            <img src="https://images.unsplash.com/photo-1591018533941-1c6313e4d1b1?w=400&q=80"
+            <img src="forest.jpg"
               alt="Sacred forest paths"
               onerror="this.style.background='#d0c8b8';this.style.height='160px'" />
             <h4>Forest Corners</h4>
@@ -1586,7 +1621,7 @@
             <a href="#inquiry">Plan This Moment →</a>
           </div>
           <div class="story-img">
-            <img src="https://images.unsplash.com/photo-1614893890543-c438c8d8fa1f?w=600&q=80"
+            <img src="himalayan.jpg"
               alt="Sacred river in the Himalayas"
               onerror="this.style.background='#e8e0d0';this.style.height='320px'" />
           </div>
@@ -1603,7 +1638,7 @@
             <a href="#inquiry">Plan This Moment →</a>
           </div>
           <div class="story-img">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Kainchi_Dham_Ashram.jpg/640px-Kainchi_Dham_Ashram.jpg"
+            <img src="kainchi.jpg"
               alt="Kainchi Dham Ashram"
               onerror="this.style.background='#e8e0d0';this.style.height='320px'" />
           </div>
@@ -1637,7 +1672,7 @@
             <a href="#inquiry">Plan This Moment →</a>
           </div>
           <div class="story-img">
-            <img src="https://images.unsplash.com/photo-1618015357798-e7e5a0f65bad?w=600&q=80"
+            <img src="devotional.jpg"
               alt="Indian wisdom and devotion evening"
               onerror="this.style.background='#e8e0d0';this.style.height='320px'" />
           </div>
@@ -1726,7 +1761,7 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-item" data-cat="ashram">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Kainchi_Dham_Ashram.jpg/640px-Kainchi_Dham_Ashram.jpg"
+        <img src="kainchi.jpg"
           alt="Kainchi Dham Ashram"
           onerror="this.style.background='#d0c8b8';this.style.height='280px'" />
         <div class="gallery-item-overlay">
@@ -1770,7 +1805,7 @@
         </div>
       </div>
       <div class="gallery-item" data-cat="himalaya">
-        <img src="https://images.unsplash.com/photo-1614893890543-c438c8d8fa1f?w=600&q=80"
+        <img src="himalayan.jpg"
           alt="Himalayan river"
           onerror="this.style.background='#d0c8b8';this.style.height='280px'" />
         <div class="gallery-item-overlay">
@@ -1781,7 +1816,7 @@
         </div>
       </div>
       <div class="gallery-item" data-cat="sacred">
-        <img src="https://images.unsplash.com/photo-1618015357798-e7e5a0f65bad?w=600&q=80"
+        <img src="wisdom.jpg"
           alt="Indian wisdom sound"
           onerror="this.style.background='#d0c8b8';this.style.height='280px'" />
         <div class="gallery-item-overlay">
@@ -1840,7 +1875,7 @@
         </div>
       </div>
       <div class="feeling-image">
-        <img src="https://images.unsplash.com/photo-1504198266287-1659872e6590?w=700&q=80"
+        <img src="himalayan_heights.png"
           alt="Himalayan ashram retreat landscape"
           onerror="this.style.background='#1a1814';this.style.height='540px'" />
       </div>
@@ -1857,7 +1892,7 @@
     </div>
     <div class="journeys-grid">
       <div class="journey-card">
-        <img src="https://images.unsplash.com/photo-1614893890543-c438c8d8fa1f?w=500&q=80"
+        <img src="river.jpg"
           alt="The Himalayan Chapter"
           onerror="this.style.background='#d0c8b8';this.style.height='240px'" />
         <div class="journey-card-body">
@@ -1868,7 +1903,7 @@
         </div>
       </div>
       <div class="journey-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Kainchi_Dham_Ashram.jpg/640px-Kainchi_Dham_Ashram.jpg"
+        <img src="kainchi.jpg"
           alt="The Kainchi Dham Experience"
           onerror="this.style.background='#d0c8b8';this.style.height='240px'" />
         <div class="journey-card-body">
@@ -1977,7 +2012,7 @@
         </div>
 
         <div class="inquiry-img-aside">
-          <img src="https://images.unsplash.com/photo-1504198266287-1659872e6590?w=700&q=80"
+          <img src="river.jpg"
             alt="Private Himalayan Steve Jobs Way India consultation"
             onerror="this.style.background='#1a1814';this.style.height='280px'" />
         </div>
@@ -2092,14 +2127,26 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
-          <li><a href="mailto:private@elevatedindia.com">private@elevatedindia.com</a></li>
-          <li><a href="#inquiry">Request Consultation</a></li>
-          <li><a href="#inquiry">Speak to a Curator</a></li>
-        </ul>
-      </div>
+  <h5>Contact</h5>
+  <ul>
+    <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+    <li><a href="mailto:private@elevatedindia.com">private@elevatedindia.com</a></li>
+    <li><a href="#inquiry">Request Consultation</a></li>
+    <li><a href="#inquiry">Speak to a Curator</a></li>
+  </ul>
+
+  <div class="site-credits">
+    <a href="https://fabulousmedia.in/" target="_blank" rel="noopener noreferrer">
+      <img src="fabulous-logo.png" alt="FabulousMedia">
+    </a>
+
+    <span></span>
+
+    <a href="https://gocommercially.com/" target="_blank" rel="noopener noreferrer">
+      <img src="gocommercially-logo.png" alt="GoCommercially">
+    </a>
+  </div>
+</div>
     </div>
     <div class="footer-bottom">
       <p>© 2025 Elevated India. All rights reserved. Confidential & Private.</p>
