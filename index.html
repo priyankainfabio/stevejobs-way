@@ -103,32 +103,58 @@
   }
   .btn-ghost-light:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
 
-  /* ============================================================
-     MARQUEE
-  ============================================================ */
-  .marquee-wrap {
-    overflow: hidden;
-    background: var(--charcoal);
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .marquee-track {
-    display: flex;
-    gap: 0;
-    animation: marquee 28s linear infinite;
-    white-space: nowrap;
-  }
-  .marquee-track span {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-    padding: 0 32px;
-  }
-  .marquee-track span.dot { color: var(--soft); padding: 0 12px; }
-  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+ /* ============================================================
+   MARQUEE
+============================================================ */
 
+.marquee-wrap{
+  overflow:hidden;
+  background:var(--charcoal);
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+
+.marquee-track{
+  display:flex;
+  align-items:center;
+  width:max-content;
+
+  animation: marqueeMove 38s linear infinite;
+}
+
+.marquee-group{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+}
+
+.marquee-group span{
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold);
+
+  padding:0 32px;
+
+  white-space:nowrap;
+}
+
+.marquee-group .dot{
+  color:var(--soft);
+  padding:0 10px;
+}
+
+@keyframes marqueeMove{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+}
   /* ============================================================
      NAVIGATION
   ============================================================ */
@@ -1376,24 +1402,65 @@
 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
+
   <div class="marquee-track">
-    <span>◆ Neem Karoli Baba Ashram</span><span class="dot">·</span>
-    <span>◆ Vrindavan Silence</span><span class="dot">·</span>
-    <span>◆ Himalayan Wandering</span><span class="dot">·</span>
-    <span>◆ Kainchi Dham</span><span class="dot">·</span>
-    <span>◆ Sacred River Paths</span><span class="dot">·</span>
-    <span>◆ India 1974</span><span class="dot">·</span>
-    <span>◆ The Spiritual Seeker</span><span class="dot">·</span>
-    <span>◆ Delhi to Rishikesh</span><span class="dot">·</span>
-    <span>◆ Neem Karoli Baba Ashram</span><span class="dot">·</span>
-    <span>◆ Vrindavan Silence</span><span class="dot">·</span>
-    <span>◆ Himalayan Wandering</span><span class="dot">·</span>
-    <span>◆ Kainchi Dham</span><span class="dot">·</span>
-    <span>◆ Sacred River Paths</span><span class="dot">·</span>
-    <span>◆ India 1974</span><span class="dot">·</span>
-    <span>◆ The Spiritual Seeker</span><span class="dot">·</span>
-    <span>◆ Delhi to Rishikesh</span><span class="dot">·</span>
+
+    <!-- GROUP 1 -->
+    <div class="marquee-group">
+      <span>◆ Neem Karoli Baba Ashram</span>
+      <span class="dot">·</span>
+
+      <span>◆ Vrindavan Silence</span>
+      <span class="dot">·</span>
+
+      <span>◆ Himalayan Wandering</span>
+      <span class="dot">·</span>
+
+      <span>◆ Kainchi Dham</span>
+      <span class="dot">·</span>
+
+      <span>◆ Sacred River Paths</span>
+      <span class="dot">·</span>
+
+      <span>◆ India 1974</span>
+      <span class="dot">·</span>
+
+      <span>◆ The Spiritual Seeker</span>
+      <span class="dot">·</span>
+
+      <span>◆ Delhi to Rishikesh</span>
+      <span class="dot">·</span>
+    </div>
+
+    <!-- GROUP 2 -->
+    <div class="marquee-group">
+      <span>◆ Neem Karoli Baba Ashram</span>
+      <span class="dot">·</span>
+
+      <span>◆ Vrindavan Silence</span>
+      <span class="dot">·</span>
+
+      <span>◆ Himalayan Wandering</span>
+      <span class="dot">·</span>
+
+      <span>◆ Kainchi Dham</span>
+      <span class="dot">·</span>
+
+      <span>◆ Sacred River Paths</span>
+      <span class="dot">·</span>
+
+      <span>◆ India 1974</span>
+      <span class="dot">·</span>
+
+      <span>◆ The Spiritual Seeker</span>
+      <span class="dot">·</span>
+
+      <span>◆ Delhi to Rishikesh</span>
+      <span class="dot">·</span>
+    </div>
+
   </div>
+
 </div>
 
 <!-- NAV -->
@@ -1807,7 +1874,7 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-item" data-cat="ashram">
-        <img src="kainchi.jpg"
+        <img src="oldk.jpg"
           alt="Kainchi Dham Ashram"
           onerror="this.style.background='#d0c8b8';this.style.height='280px'" />
         <div class="gallery-item-overlay">
@@ -1818,7 +1885,7 @@
         </div>
       </div>
       <div class="gallery-item" data-cat="himalaya">
-        <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=600&q=80"
+        <img src="oldh.jpg"
           alt="Himalayan mountain"
           onerror="this.style.background='#d0c8b8';this.style.height='280px'" />
         <div class="gallery-item-overlay">
@@ -1829,7 +1896,7 @@
         </div>
       </div>
       <div class="gallery-item" data-cat="meditation">
-        <img src="meditation.jpg"
+        <img src="oldev.jpg"
           alt="Meditation ashram"
           onerror="this.style.background='#d0c8b8';this.style.height='280px'" />
         <div class="gallery-item-overlay">
@@ -1840,7 +1907,7 @@
         </div>
       </div>
       <div class="gallery-item" data-cat="sacred">
-        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80"
+        <img src="old d.jpg"
           alt="Sacred Delhi India"
           onerror="this.style.background='#d0c8b8';this.style.height='280px'" />
         <div class="gallery-item-overlay">
@@ -1851,7 +1918,7 @@
         </div>
       </div>
       <div class="gallery-item" data-cat="himalaya">
-        <img src="himalayan.jpg"
+        <img src="oldr.jpg"
           alt="Himalayan river"
           onerror="this.style.background='#d0c8b8';this.style.height='280px'" />
         <div class="gallery-item-overlay">
